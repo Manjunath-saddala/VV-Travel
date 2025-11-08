@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VV Travel - Your Journey Begins Here</title>
+    <title>VV Travel - Your Trusted Ride Partner in Hyderabad</title>
     <style>
         * {
             margin: 0;
@@ -94,7 +94,7 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
+            max-width: 900px;
             padding: 2rem;
         }
 
@@ -111,18 +111,43 @@
             animation: fadeInUp 1s ease 0.2s backwards;
         }
 
+        .location-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.1s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
         .cta-button {
-            padding: 1rem 3rem;
-            font-size: 1.2rem;
-            background: #fff;
-            color: #667eea;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             font-weight: bold;
             transition: all 0.3s ease;
-            animation: fadeInUp 1s ease 0.4s backwards;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button.primary {
+            background: #fff;
+            color: #667eea;
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
         }
 
         .cta-button:hover {
@@ -154,65 +179,43 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .destinations {
+        .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .destination-card {
-            position: relative;
-            height: 400px;
+        .service-card {
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .destination-card:hover {
+        .service-card:hover {
+            background: rgba(102, 126, 234, 0.1);
             transform: translateY(-10px);
+            border-color: #667eea;
         }
 
-        .destination-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
-            z-index: 1;
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
-        .destination-card.paris {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
         }
 
-        .destination-card.tokyo {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .destination-card.bali {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-        }
-
-        .destination-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            z-index: 2;
-        }
-
-        .destination-info h3 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .destination-info p {
-            opacity: 0.9;
+        .service-card p {
+            opacity: 0.8;
+            line-height: 1.6;
         }
 
         .features {
@@ -246,14 +249,111 @@
             color: #667eea;
         }
 
+        .driver-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .driver-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .driver-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .driver-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .driver-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: left;
+        }
+
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .benefit-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-button {
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+            background: #fff;
+            color: #667eea;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
         .footer {
             background: #000;
             padding: 3rem 5%;
             text-align: center;
         }
 
-        .footer p {
-            opacity: 0.7;
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-item span {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #667eea;
         }
 
         @media (max-width: 768px) {
@@ -272,6 +372,25 @@
             .section {
                 padding: 3rem 5%;
             }
+
+            .driver-section h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -280,75 +399,154 @@
         <div class="logo">VV TRAVEL</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#destinations">Destinations</a></li>
-            <li><a href="#features">Why Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#driver">Drive With Us</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Explore the World with VV Travel</h1>
-            <p>Your adventure starts here. Discover breathtaking destinations and create unforgettable memories.</p>
-            <button class="cta-button" onclick="scrollToSection('destinations')">Start Your Journey</button>
-        </div>
-    </section>
-
-    <section class="section" id="destinations">
-        <h2 class="section-title">Popular Destinations</h2>
-        <div class="destinations">
-            <div class="destination-card paris">
-                <div class="destination-info">
-                    <h3>Paris</h3>
-                    <p>The city of love and lights awaits you</p>
-                </div>
-            </div>
-            <div class="destination-card tokyo">
-                <div class="destination-info">
-                    <h3>Tokyo</h3>
-                    <p>Experience the perfect blend of tradition and technology</p>
-                </div>
-            </div>
-            <div class="destination-card bali">
-                <div class="destination-info">
-                    <h3>Bali</h3>
-                    <p>Paradise on earth with stunning beaches</p>
-                </div>
+            <div class="location-badge">📍 Serving Hyderabad</div>
+            <h1>Your Trusted Ride, Anytime</h1>
+            <p>Safe, reliable, and affordable cab services across Hyderabad. Book your ride in seconds!</p>
+            <div class="cta-buttons">
+                <button class="cta-button primary" onclick="scrollToSection('contact')">Book a Ride</button>
+                <button class="cta-button secondary" onclick="scrollToSection('driver')">Become a Driver</button>
             </div>
         </div>
     </section>
 
-    <section class="section" id="features">
+    <section class="section" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <span class="service-icon">🚗</span>
+                <h3>Daily Rides</h3>
+                <p>Quick and comfortable rides for your daily commute, shopping, or appointments anywhere in Hyderabad</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">✈️</span>
+                <h3>Airport Transfers</h3>
+                <p>Hassle-free pickups and drops to Rajiv Gandhi International Airport with on-time guarantee</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🏢</span>
+                <h3>Corporate Travel</h3>
+                <p>Professional transportation solutions for businesses and corporate clients with invoicing</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🌙</span>
+                <h3>24/7 Service</h3>
+                <p>Round-the-clock availability for early morning flights, late-night returns, or emergency rides</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="why-us">
         <h2 class="section-title">Why Choose VV Travel?</h2>
         <div class="features">
             <div class="feature-card">
-                <div class="feature-icon">✈️</div>
-                <h3>Best Prices</h3>
-                <p>Get the most competitive rates on flights and accommodations</p>
+                <div class="feature-icon">💰</div>
+                <h3>Affordable Rates</h3>
+                <p>Transparent pricing with no hidden charges. Best rates in Hyderabad</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🌍</div>
-                <h3>Global Coverage</h3>
-                <p>Access to destinations worldwide with local expertise</p>
+                <div class="feature-icon">🛡️</div>
+                <h3>Safe & Verified</h3>
+                <p>All drivers are background-checked and trained for your safety</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Tailored Packages</h3>
-                <p>Customized itineraries designed just for you</p>
+                <div class="feature-icon">⚡</div>
+                <h3>Quick Booking</h3>
+                <p>Book instantly via call or WhatsApp. Cab arrives in minutes</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">💼</div>
-                <h3>24/7 Support</h3>
-                <p>Round-the-clock assistance wherever you are</p>
+                <div class="feature-icon">🧹</div>
+                <h3>Clean Vehicles</h3>
+                <p>Well-maintained and sanitized cars for a comfortable journey</p>
             </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍✈️</div>
+                <h3>Professional Drivers</h3>
+                <p>Experienced, courteous drivers who know Hyderabad inside out</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Easy Payment</h3>
+                <p>Multiple payment options - Cash, UPI, Cards, or Digital Wallets</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="driver-section" id="driver">
+        <div class="driver-content">
+            <h2>🚗 Join VV Travel as a Driver</h2>
+            <p>Be your own boss! Drive with VV Travel and earn good income with flexible hours</p>
+            
+            <div class="driver-benefits">
+                <div class="benefit-item">
+                    <h4>💵 Great Earnings</h4>
+                    <p>Competitive commissions and weekly payouts</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>⏰ Flexible Hours</h4>
+                    <p>Work on your own schedule, full-time or part-time</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🎯 Steady Rides</h4>
+                    <p>Regular customers and consistent bookings</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🤝 Support Team</h4>
+                    <p>24/7 driver support and assistance</p>
+                </div>
+            </div>
+
+            <h3 style="margin: 2rem 0 1rem;">Requirements:</h3>
+            <p style="text-align: left; max-width: 600px; margin: 0 auto 2rem;">
+                ✓ Valid Driving License<br>
+                ✓ Own car or willing to attach vehicle<br>
+                ✓ Good knowledge of Hyderabad roads<br>
+                ✓ Professional attitude
+            </p>
+
+            <button class="contact-button" onclick="callDriver()">📞 Contact Us for Driver Jobs</button>
         </div>
     </section>
 
     <footer class="footer" id="contact">
-        <h2 style="margin-bottom: 1rem;">Ready to Travel?</h2>
-        <p>Contact us today and let's plan your dream vacation</p>
-        <p style="margin-top: 2rem;">📧 info@vvtravel.com | 📞 +1 (555) 123-4567</p>
-        <p style="margin-top: 2rem; opacity: 0.5;">&copy; 2024 VV Travel. All rights reserved.</p>
+        <div class="footer-content">
+            <h2 style="margin-bottom: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Contact VV Travel</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <p><strong>Call/WhatsApp</strong></p>
+                    <p>+91 99999 99999</p>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <p><strong>Email</strong></p>
+                    <p>info@vvtravel.com</p>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <p><strong>Location</strong></p>
+                    <p>Hyderabad, Telangana</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="WhatsApp">💬</a>
+            </div>
+
+            <p style="margin-top: 2rem; opacity: 0.5;">&copy; 2024 VV Travel. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
@@ -368,6 +566,11 @@
             element.scrollIntoView({ behavior: 'smooth' });
         }
 
+        // Driver contact function
+        function callDriver() {
+            alert('Driver Recruitment Contact:\n\n📞 Call: +91 99999 99999\n📧 Email: careers@vvtravel.com\n\nOr visit our office in Hyderabad for walk-in interviews!');
+        }
+
         // Add scroll animation observer
         const observerOptions = {
             threshold: 0.1,
@@ -384,7 +587,7 @@
         }, observerOptions);
 
         // Observe all cards
-        document.querySelectorAll('.destination-card, .feature-card').forEach(card => {
+        document.querySelectorAll('.service-card, .feature-card, .benefit-item').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'all 0.6s ease';
